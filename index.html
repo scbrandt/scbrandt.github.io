@@ -41,14 +41,14 @@ MathJax = {
 				<a href="#teaching">Teaching</a>
 			</li>-->
 			<li>
+				<a href="#position" style="color:red">Open Positions</a>
+			</li>
+			<li>
 				<a href="#publications">Publications</a>
 			</li>
 			<li>
 				<a href="#introduction">Research Introduction</a>
 			</li>
-			<!--<li>
-				<a href="#sebastian" style="color:red">Open Positions</a>
-			</li>-->
 			<!-- <li> -->
 				<!-- <a href="contact.html">Contact</a> -->
 			<!-- </li> -->
@@ -164,6 +164,15 @@ MathJax = {
 			<a href="https://scholar.google.com/citations?hl=de&user=3MIPfVYAAAAJ">Google Scholar</a>
 			<br>
 			<a href="https://dblp.org/pid/46/950-2.html">DBLP</a>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<p style="text-align: center; margin: auto; padding: 10px; width: 58%; color: red; border: 2px solid red;">
+			We have several <a href="#position">open positions</a> for PhD students and postdocs!
+			</p>
 		</div>
 		
 	</div>
@@ -172,14 +181,50 @@ MathJax = {
 
 
 
-<!--
-<div class="block content">
+
+<div class="block content" id="position">
 	<div class="subcontent">
 		<h2>Open Positions</h2>
-		text
+		<p>
+		Several PhD and Postdoc positions are available in our group! We are looking for bright and motivated students and researchers interested in working on distributed and parallel algorithms. Our newly founded group aims for being one of the leading reseach groups in the area of distributed and parallel algorithms, with a strong emphasis on cutting-edge research. For an introduction to our research, please take a look <a href="#introduction">here</a>.
+		</p>
+		<p>
+		<strong>PhD positions:</strong>
+		The ideal candidate has an excellent master's (or, in exceptional cases, bachelor's) degree in computer science or a related field. We expressly encourage bright students from maths (in particular pure maths) to apply if they are interested in algorithmic questions. A background in distributed or parallel algorithms is not necessary.
+		</p>
+		<p>
+		<strong>Postdoc positions:</strong>
+		The ideal candidate has a strong background in algorithmic research, with publications in leading TCS conferences or journals, and is interested in working in the area of distributed and parallel algorithms. The candidate is expected to have a doctoral degree, or to complete her/his PhD soon. The postdoc positions are typically for 1 to 2 years, but can possibly be extended. We encourage postdocs to develop their own research agenda.
+		</p>
+		<p>
+		<strong>What we offer:</strong>
+		All positions are fully funded and come with excellent working conditions, such as a competitive salary, social security, 30 days of vacation, and generous travel support. Saarbruecken is considered as one of the top locations for computer science in Europe, with the Saarland Informatics Campus being home to Saarland University and several leading research institutes (such as the Helmholtz Center, two Max Planck Institutes, a Fraunhofer Institute, and more), offering a vibrant atmosphere and ideal conditions for collaboration. Beyond that, our group has established strong ties to other leading research groups across Europe, creating further potential for collaboration and research visits.
+		</p>
+		<p>
+		Our group is committed to providing a healthy work environment and fostering diversity and respectful interaction. We welcome applications by candidates from all backgrounds.
+		</p>
+		<p>
+		Participation in teaching is encouraged, but not required. The starting dates of the positions are flexible although we would prefer to fill them as soon as possible. Knowledge of German is not necessary.
+		</p>
+		<p>
+		We will accept applications until the positions are filled. However, for full consideration, please submit your application by <strong>June 28, 2022</strong>, either <a href="https://jobs.cispa.saarland/de_DE/jobs/apply/phd-students-1">here</a> (PhD positions) or <a href="https://jobs.cispa.saarland/de_DE/jobs/apply/postdoctoral-researchers-3">here</a> (postdoc positions). The linked application pages also specify the required (marked with a star) and optional documents.
+		</p>
+		<p>
+		Please explicitly indicate in your cover letter that the application is for the group of Sebastian Brandt (as the application portal is used CISPA-wide).
+		</p>
+		<p>
+		If you have any questions, don't hesitate to contact Sebastian Brandt
+		(<script type="text/javascript">
+			document.write("<k mvkcc=\"w\" rbop=\"wksvdy:lbkxnd@msczk.no\" bov=\"xypyvvyg\">lbkxnd@msczk.no</k>".replace(/[a-zA-Z]/g, 
+			function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+16)?c:c-26);}));
+		</script>).
+		Informal inquiries are welcome.
 	</div>
 </div>
--->
+
+
+
+
 
 <div class="block content" id="teaching">
 	<div class="subcontent">
@@ -653,7 +698,7 @@ MathJax = {
 	<div class="subcontent">
 			<h2>A Glimpse into What We Do</h2>
 			<p align="justify">
-			For everyone who wants to know more about what kinds of problems we study and what kinds of questions we ask, let me try to give you an introduction to what we're interested in.
+			For everyone who wants to know more about what kinds of problems we study and what kinds of questions we ask, let me try to give you an introduction to what we're interested in (for another introduction with lots of pictures, see <a href="https://jukkasuomela.fi/landscape-of-locality/">here</a>).
 			To make things as accessible as possible, we will take a look at a typical problem we would like to solve and explain some settings and concepts along the way.
 			Let me say up front that this will not give you anything resembling a comprehensive overview of the (fairly vast) field of distributed algorithms; what we will discuss below will hopefully give you a good first idea of what distributed graph algorithms are about, but we won't have time to touch upon many fascinating research directions of the distributed world, such as distributed complexity theory, distributed lower bounds, the role of randomness, and many more.
 			Alright, let me say at least a few words about the three directions I mentioned, before going to the meat of the introduction and looking at a concrete problem.
@@ -682,7 +727,7 @@ MathJax = {
 			Imagine that each vertex of the input graph is a separate computational entity and that each edge is a communication link between the two entities corresponding to its endpoints. In other words, you can imagine the graph to be a computer network, and all computers work together to solve the given problem by sending around messages. In our case, each computer would like to choose a color that no neighbor has. Doesn't sound so complicated? If we don't care about how long it takes, that's correct. But we would like to have an algorithm that is very fast as a function of the size of the network, as nowadays networks can be very large (think of the internet). What does "fast" mean? And how exactly do these computers work together? Alright, let's be a bit more precise.
 			</p>
 			<p align="justify">
-			The joint computation performed by the vertices (i.e., by the associated computational devices) proceeds in synchronous rounds $r = 1, 2, 3, \ldots$. In each round each vertex is allowed to send an arbitrary large message to each of its neighbors. Moreover, each vertex can perform any (internal) computation on the knowledge it has gathered at any point in time (e.g., to decide which message to send in the next round). Each vertex has to decide at some point that it terminates upon which it has to provide its output (which in the $(\Delta + 1)$-coloring problem would be its own color) and doesn't participate anymore in the computation. What we would like to now (and what we call the runtime of the computation/algorithm) is simply how many synchronous rounds it takes until the last vertex terminates. Of course we want the vertices to terminate as fast as possible, but always under the condition that the (combined) provided output is correct (e.g., in our case that the combined output constitutes a proper $(\Delta + 1)$-coloring). The focus on the number of rounds implies that internal computation is essentially free; all we care about (for now) is how many message-passing rounds we need. (For everyone from the maths side: there is an equivalent and very clean way to define the setting in a non-algorithmic fashion; we will provide details further below.)
+			The joint computation performed by the vertices (i.e., by the associated computational devices) proceeds in synchronous rounds $r = 1, 2, 3, \ldots$. In each round each vertex is allowed to send an arbitrary large message to each of its neighbors. Moreover, at any point in time any vertex can (internally) perform any computation on the knowledge it has gathered so far (e.g., in order to decide which message to send in the next round). Each vertex has to decide at some point that it terminates upon which it has to provide its output (which in the $(\Delta + 1)$-coloring problem would be its own color) and doesn't participate anymore in the computation. What we would like to now (and what we call the runtime of the computation/algorithm) is simply how many synchronous rounds it takes until the last vertex terminates. Of course we want the vertices to terminate as fast as possible, but always under the condition that the (combined) provided output is correct (e.g., in our case it is required that the combined output constitutes a proper $(\Delta + 1)$-coloring). The focus on the number of rounds implies that internal computation is essentially free; all we care about (for now) is how many message-passing rounds we need. (For everyone from the maths side: there is an equivalent and very clean way to define the setting in a non-algorithmic fashion; we will provide details further below.)
 			</p>
 			<p align="justify">
 			As algorithm designers, our task is to tell the vertices what messages they should send around and which internal computations they should perform (before we know anything about the input graph). In other words, we are supposed to provide one algorithm, one list of instructions, that is given to and executed by every vertex of the input graph. Of course, this list can contain instructions that are dependent on, e.g., the knowledge or degree of the vertex executing the instructions; for instance, an instruction could tell a vertex to perform some action only if its degree is at least $5$, or if it already received a certain kind of message. Due to the fact that each vertex executes the same algorithm, it is usually assumed that each vertex has a unique numerical identifier, i.e., each vertex is given some positive integer that no other vertex is given (but we have no control over which vertex gets which identifier). This ensures that even in very symmetrical input graphs, different vertices may perform different actions despite executing the same algorithm.
@@ -717,9 +762,9 @@ MathJax = {
 			</p>
 			<p align="justify">
 			After discussing the setting and looking at an example algorithm, let's now come back to the problem of computing a $(\Delta + 1)$-coloring.
-			The best (deterministic) upper bound currently known is due to a result by Ghaffari and Kuhn from 2021.
-			It states that a $(\Delta + 1)$-coloring can be computed (in the setting explaing above) in $O(\log^3 n)$ rounds.
-			This is already a decent runtime, but, up to a constant factor, the best lower bound that is known is just a lower bound of $\log^* n$!
+			The best (deterministic) upper bound currently known is due to a <a href="https://arxiv.org/abs/2011.04511">result</a> by Ghaffari and Kuhn from 2021.
+			It states that a $(\Delta + 1)$-coloring can be computed (in the setting explained above) in $O(\log^3 n)$ rounds.
+			This is already a decent runtime, but the best lower bound that is known is just a lower bound of $\Omega(\log^* n)$ (see, e.g., <a href="https://arxiv.org/pdf/1402.2552.pdf">here</a>)!
 			So there is quite a large gap between lower and upper bound, and according to our current knowledge it is still possible that there is an $O(\log^* n)$-round algorithm for $(\Delta + 1)$-coloring, i.e., an incredibly fast algorithm.
 			</p>
 			<p align="justify">
@@ -738,12 +783,17 @@ MathJax = {
 			</p>	
 			<p align="justify">
 			While this is all I wanted to say about $(\Delta + 1)$-coloring, let me come back to something I mentioned earlier, namely that there is an equivalent non-algorithmic way of defining our setting.
-			If you think a bit about which messages a vertex should send to its neighbors, then you will realize that due to the fact that we do not restrict the message size in any way, each vertx should always send everything it has learned so far.
-			If each vertex follows this rule, then in a $T$-round algorithm every vertx learns exactly its $T$-hop neighborhood in the graph (obviously it can learn nothing beyond distance $T$ since the information doesn't have enough time to travel that far).
+			If you think a bit about which messages a vertex should send to its neighbors, then you will realize that due to the fact that we do not restrict the message size in any way, each vertex should always send everything it has learned so far.
+			If each vertex follows this rule, then in a $T$-round algorithm every vertex learns exactly its $T$-hop neighborhood in the graph (obviously it can learn nothing beyond distance $T$ since the information doesn't have enough time to travel that far).
 			In other words, each vertex decides on its output purely by looking at its $T$-hop neighborhood.
 			As such, we can understand a $T$-round algorithm as a function from the space of all possible vertex $T$-hop neighborhoods to the space of allowed vertex outputs (where the function describes what the center vertex of the $T$-hop neighborhood outputs).
 			Having both the algorithmic message-passing definition and the non-algorithmic function definition is very useful; depending on the studied problem and the objective (algorithm, lower bound, ...), it could be either perspective that makes it easier to come up with a good approach (while technically one can always rephrase an algorithm given in the one formalism in the other formalism and vice versa).
-			</p>			
+			</p>	
+			<p>
+			I hope that I managed to give you at least a rough idea of what kinds of problems and questions we are interested in.
+			Of course, what we have seen so far constitutes only a small part of the types of problems, questions, and settings that we study; as mentioned before, distributed algorithms is a vast field with lots of exciting open problems!
+			If you want to learn more about distributed algorithms, have a look at some of the excellent lecture notes accompanying courses in this area (such as <a href="https://disco.ethz.ch/courses/podc/lecturenotes/DGA.pdf">these</a> or <a href="https://jukkasuomela.fi/da2020/da2020.pdf">these</a>).
+			</p>
 	</div>
 </div>
 .
