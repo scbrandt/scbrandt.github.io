@@ -33,7 +33,7 @@
 	list-style: none;
 	line-height: 60px;
 	margin: 0;
-	padding-left: 50px;
+	padding-left: 30px;
 }
 #navigation ul {
 	display: inline-block;
@@ -46,7 +46,7 @@
 	float: left;
 	
 	text-align: center;
-	padding: 0 50px;
+	padding: 0 37px;
 }
 #navigation li a {
 	color: #818181;
